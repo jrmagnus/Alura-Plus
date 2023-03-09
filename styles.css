@@ -4,6 +4,9 @@
     --botao-azul: #167bf7;
     --background-color: #00030C;
     --fonte: 'Inter';
+    --margem-lados: 10%;
+    --fonte-bold: 700;
+    --fonte-normal: 400;
 }
 
 * {
@@ -16,24 +19,34 @@ body {
     color: var(--branco-1);
     font-family: var(--fonte);
     font-size: 16px;
-    font-weight: 400;
+    font-weight: var(--fonte-normal);
 }
 
 .main {
     background-image: url("img/Background.png");
     background-repeat: no-repeat;
     background-size: contain;
-}
-
-.container__titulo {
-    font-size: 28px;
-    font-weight: 700;
+    align-items: center;
+    text-align: center;
 }
 
 .container {
     height: 100vh;
     display: grid;
     grid-template-columns: 50% 50%;
+}
+
+.container__caixa {
+    margin: 0 var(--margem-lados);
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: var(--fonte-bold);
+}
+
+.container__logo {
+    margin: 1em 0 2em 0;
 }
 
 .container__botao {
@@ -44,6 +57,7 @@ body {
     display: block;
     text-decoration: none;
     text-align: center;
+    margin-bottom: 1em;
 }
 
 .botao_2 {
@@ -54,4 +68,33 @@ body {
 .container__aviso {
     font-size: 12px;
     color: var(--cinza-2);
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+.secundario__imagem {
+    width: 80%;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 var(--margem-lados);
+}
+
+.descricao__titulo {
+    font-size: 48px;
+    font-weight: var(--fonte-bold);
+    color: var(--branco-1);
+    margin-bottom: 0,75rem;
+}
+
+.descricao__mensagem {
+    color: var(--cinza-2);
+}
+
+.secundario__botao {
+    display: inline-block;
+    margin-top: 1rem;
 }
